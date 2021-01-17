@@ -1,22 +1,18 @@
 import React from "react";
+import { fakeData } from "../../data/data.js";
+
+import ReviewDetail from "./Reviews/ReviewDetail";
 
 const App = () => {
   return (
-    <div className="ui container reviews">
-      <div className="review">
-        <a href="/" className="avatar">
-          <img alt="avatar"></img>
-        </a>
-        <div className="content">
-          <a href="/" className="author">
-            Sam
-          </a>
-          <div className="metadata">
-            <span className="date">Today at 6:00PM</span>
-          </div>
-          <div className="text">Great location!</div>
-        </div>
-      </div>
+    <div className="ui container comments">
+      <ReviewDetail
+        author={fakeData.author}
+        month={fakeData.month}
+        year={fakeData.year}
+        review={fakeData.review}
+        profilePic={fakeData.profilePic}
+      />
     </div>
   );
 };
