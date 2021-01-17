@@ -1,5 +1,5 @@
 import React from "react";
-import { fakeData } from "../../data/data.js";
+import { fakeData } from "../data.js";
 
 import ReviewDetail from "./Reviews/ReviewDetail";
 
