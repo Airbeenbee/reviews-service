@@ -41,10 +41,6 @@ const ReviewDetail = ({ author, month, year, review, profilePic }) => {
             </div>
           </div>
         </Grid.Column>
-        <Grid.Column width={8}>PLACEHOLDER TEXT</Grid.Column>
-      </Grid.Row>
-
-      <Grid.Row>
         <Grid.Column width={8}>
           <div className="comment">
             <a href="/">
@@ -68,7 +64,57 @@ const ReviewDetail = ({ author, month, year, review, profilePic }) => {
             </div>
           </div>
         </Grid.Column>
-        <Grid.Column width={8}>PLACEHOLDER TEXT</Grid.Column>
+      </Grid.Row>
+
+      <Grid.Row>
+        <Grid.Column width={8}>
+          {/*  */}
+          <div className="comment">
+            <a href="/">
+              <Image
+                circular
+                src={profilePic}
+                size="tiny"
+                verticalAlign="middle"
+              />
+            </a>
+            <div className="content">
+              <a href="/" className="author">
+                {author}
+              </a>
+              <div className="metadata">
+                <span className="date">
+                  {month} {year}
+                </span>
+              </div>
+              <div className="text">{review}</div>
+            </div>
+          </div>
+        </Grid.Column>
+        <Grid.Column width={8}>
+          {/*  */}
+          <div className="comment">
+            <a href="/">
+              <Image
+                circular
+                src={profilePic}
+                size="tiny"
+                verticalAlign="middle"
+              />
+            </a>
+            <div className="content">
+              <a href="/" className="author">
+                {author}
+              </a>
+              <div className="metadata">
+                <span className="date">
+                  {month} {year}
+                </span>
+              </div>
+              <div className="text">{review}</div>
+            </div>
+          </div>
+        </Grid.Column>
       </Grid.Row>
     </Grid>
   );
