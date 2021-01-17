@@ -1,13 +1,13 @@
 FROM node:latest
 
-RUN mkdir -p /src/app
+WORKDIR /usr/src/app
 
-WORKDIR /src/app
-
-COPY . /src/app
+COPY package.json .
 
 RUN npm install
 
-EXPOSE 3002
+COPY . .
 
-CMD ["npm", "start"]
+EXPOSE 5000
+
+CMD "node" "server/index.js"

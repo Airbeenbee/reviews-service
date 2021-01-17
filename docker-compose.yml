@@ -1,17 +1,32 @@
-version: '3'
+# version: '3'
 
+# services:
+#   reviews-service:
+#     build: ./
+#     command: sh -c 'npm install; npm start-server'
+#     volumes:
+#       - .:/src/app
+#     depends_on:
+#       - 'db'
+#     ports:
+#       - '5000:5000'
+
+#   db:
+#     image: mongo:latest
+#     ports:
+#       - 27017:27017
+
+version: '3'
 services:
   reviews-service:
-    build: ./
-    command: sh -c 'npm install; npm start'
-    volumes:
-      - .:/src/app
+    image: docker-node-mongo
+    build: .
+    command: "node server/index.js"
+    ports:
+      - "5000:5000"
     depends_on:
-      - 'db'
+      - "mongo"
+  mongo:
+    image: "mongo"
     ports:
-      - '5000:5000'
-
-  db:
-    image: mongo:latest
-    ports:
-      - 27017:27017
+      - "27017:27017"

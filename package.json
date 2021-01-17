@@ -7,7 +7,10 @@
     "build": "webpack --mode=production",
     "dev": "webpack-dev-server",
     "server": "nodemon server/index.js rs",
-    "react": "webpack -d --watch"
+    "react": "webpack -d --watch",
+    "seed": "node db/seeds/reviews.js",
+    "start-server": "node server/index.js",
+    "start-dev-server": "nodemon server/index.js"
   },
   "keywords": [],
   "author": "Joe Boulos",
@@ -32,6 +35,7 @@
     "css-loader": "^5.0.1",
     "express": "^4.17.1",
     "faker": "^5.1.0",
+    "nodemon": "^2.0.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "semantic-ui-css": "^2.4.1",
