@@ -5,30 +5,35 @@ import { Grid, Image } from "semantic-ui-react";
 
 const ReviewDetail = ({ userReviews }) => {
   return (
-    <Grid>
+    <Grid padded>
       <Grid.Row>
         {userReviews.map((userReview) => (
           <Grid.Column width={8} key={userReview.id}>
-            <div className="comment">
-              <a href="/">
-                <Image
-                  circular
-                  size="tiny"
-                  verticalAlign="middle"
-                  src={userReview.profilePic}
-                />
-              </a>
-              <div className="content">
-                <a href="/" className="author">
-                  {userReview.author}
-                </a>
-                <div className="metadata">
-                  <span className="date">
+            <div className="ui comment content">
+              <Grid padded>
+                <Grid.Column width={3}>
+                  <a href="/">
+                    <Image
+                      circular
+                      size="tiny"
+                      verticalAlign="middle"
+                      src={userReview.profilePic}
+                    />
+                  </a>
+                </Grid.Column>
+                <Grid.Column width={4}>
+                  <span>
+                    <a href="/" className="header author">
+                      {userReview.author}
+                    </a>
+                  </span>
+                  <span className="date metadata">
                     {userReview.month} {userReview.year}
                   </span>
-                </div>
-                <div className="text">{userReview.review}</div>
-              </div>
+                </Grid.Column>
+                <Grid.Column width={9}></Grid.Column>
+              </Grid>
+              <div className="text">{userReview.review}</div>
             </div>
           </Grid.Column>
         ))}
