@@ -9,12 +9,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + "/public"));
 
-app.get("/api/test", (req, res) => {
+app.get("/api/test", (_, res) => {
   res.json("/api/test route Hello World!");
 });
 
 // get all reviews
-app.get("/api/reviews", (req, res) => {
+app.get("/api/reviews", (_, res) => {
   Review.find()
     .then((Reviews) => res.status(200).send(Reviews))
     .catch((err) => res.status(400).send(err));

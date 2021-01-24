@@ -1,16 +1,5 @@
 import faker from "faker";
 
-// const fakeData = {
-//   author: faker.name.firstName(),
-//   month: faker.date.month(),
-//   year: faker.random.number({
-//     min: 2018,
-//     max: 2021,
-//   }),
-//   review: faker.lorem.paragraph(),
-//   profilePic: faker.image.image(),
-// };
-
 const fakeData = [
   {
     id: 1,
@@ -155,4 +144,37 @@ const fakeData = [
   },
 ];
 
-export { fakeData };
+const fakeRatings = [
+  {
+    id: 1,
+    ratingType: "Cleanliness",
+    rating: 5,
+  },
+  {
+    id: 2,
+    ratingType: "Communication",
+    rating: 4.5,
+  },
+  {
+    id: 3,
+    ratingType: "Check-in",
+    rating: 5,
+  },
+  {
+    id: 4,
+    ratingType: "Accuracy",
+    rating: 4.9,
+  },
+  {
+    id: 5,
+    ratingType: "Location",
+    rating: 5,
+  },
+  {
+    id: 6,
+    ratingType: "Value",
+    rating: 5,
+  },
+];
+
+export { fakeData, fakeRatings };
